@@ -1,0 +1,19 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "aws-20241213",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0",
+  "replacements": [
+    {
+      "filename": "force-app/main/default/genAiPromptTemplates/Hybrid_Search.genAiPromptTemplate-meta.xml",
+      "stringToReplace": "REPLACE_RETRIEVER",
+      "replaceWithEnv": "RETRIEVER"
+    }
+  ]
+}
