@@ -14,6 +14,11 @@
       "filename": "force-app/main/default/genAiPromptTemplates/Hybrid_Search.genAiPromptTemplate-meta.xml",
       "stringToReplace": "REPLACE_RETRIEVER",
       "replaceWithEnv": "RETRIEVER"
+    },
+    {
+      "filename": "force-app/main/default/bots/Santa_s_Little_Helper/Santa_s_Little_Helper.bot-meta.xml",
+      "stringToReplace": "REPLACE_AGENT_USERNAME",
+      "replaceWithEnv": "AGENT_USERNAME"
     }
   ]
 }
