@@ -39,5 +39,5 @@ FILENAME="force-app/main/default/genAiPromptTemplates/Hybrid_Search.genAiPromptT
 ## Deploy metadata
 ```bash
 TARGET_ORG="aws-20241213-deploy-org"; sf org assign permset -n EinsteinGPTPromptTemplateManager --target-org $TARGET_ORG
-TARGET_ORG="aws-20241213-deploy-org"; RETRIEVER=`./scripts/get_retriever.sh File_Santa_Secret_Stash $TARGET_ORG` sf project deploy start --dry-run --target-org $TARGET_ORG
+TARGET_ORG="aws-20241213-deploy-org"; RETRIEVER=`./scripts/get_retriever.sh File_Santa_Secret_Stash $TARGET_ORG --silent` sf project deploy start --dry-run --target-org $TARGET_ORG
 ```
