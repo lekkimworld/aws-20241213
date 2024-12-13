@@ -31,7 +31,7 @@ This script is used to list the retrievers in an org as a JSON structure. It out
 
 ## Retrieve metadata
 ```bash 
-TARGET_ORG="aws-20241213"; sf project retrieve start -m GenAiFunction -m GenAiPlugin -m GenAiPlanner:Robin_s_Service_Agent -m GenAiPromptTemplate:Hybrid_Search --target-org $TARGET_ORG
+TARGET_ORG="aws-20241213"; sf project retrieve start -m GenAiFunction -m GenAiPlugin -m GenAiPlanner:Robin_s_Service_Agent -m GenAiPromptTemplate:Hybrid_Search -m Bot:Santa_s_Little_Helper -m BotVersion:Santa_s_Little_Helper.v1 --target-org $TARGET_ORG
 
 FILENAME="force-app/main/default/genAiPromptTemplates/Hybrid_Search.genAiPromptTemplate-meta.xml" && cat $FILENAME | sed -E 's/RagFileUDMO_SI_[_a-z0-9]+/REPLACE_RETRIEVER/gi' | sponge $FILENAME
 ```
@@ -40,4 +40,9 @@ FILENAME="force-app/main/default/genAiPromptTemplates/Hybrid_Search.genAiPromptT
 ```bash
 TARGET_ORG="aws-20241213-deploy-org"; sf org assign permset -n EinsteinGPTPromptTemplateManager --target-org $TARGET_ORG
 TARGET_ORG="aws-20241213-deploy-org"; RETRIEVER=`./scripts/get_retriever.sh File_Santa_Secret_Stash $TARGET_ORG --silent` sf project deploy start --dry-run --target-org $TARGET_ORG
+```
+
+## Reset demo
+```bash
+rm -rf force-app/main/default/genAiPlanners force-app/main/default/genAiPlugins force-app/main/default/genAiPromptTemplates force-app/main/default/genAiFunctions force-app/main/default/bots
 ```
