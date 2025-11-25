@@ -1,5 +1,7 @@
 # Architect Webinar Series 13 December 2024
 
+*PLEASE NOTE:* This repo is no longer up to date as Salesforce is no longer using `GenaiPlanner`, `GenAiPlugin` and `GenAiFunction` in the way described in this repo. We are now using `GenAiPlannerBundle` and potentially actions and topics local to the agent. 
+
 For the Architect Webinar on 13 December 2024 we demoed deployment of an Agentforce Agent with a Prompt Template action from one org to another. The Prompt Template uses Retrieval Augmented Generation (RAG) with Data Cloud and since the API name of the retriever is dynamic some processsing is required. The repo shows how to find the retriever API name in an org and then replace the API name during deployment.
 
 Getting information about retrievers in an org can be done with the `/services/data/v62.0/ssot/machine-learning/retrievers` REST endpoint. In the repo there are two scripts that uses this to extract information.
